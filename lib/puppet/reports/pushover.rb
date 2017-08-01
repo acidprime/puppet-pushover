@@ -13,7 +13,7 @@ Puppet::Reports.register_report(:pushover) do
   raise(Puppet::ParseError, "Pushover report config file #{configfile} not readable") unless File.exist?(configfile)
   @config = YAML.load_file(configfile)
   USERKEY = @config[:userkey]
-  APIKEY  = "oCuifGPabyVxBzlfgWOw1WgYfN5ODH"
+  APIKEY  = @config[:apikey]
 
   desc <<-DESC
   Send notification of failed reports to Pushover.
