@@ -5,8 +5,8 @@ class pushover(
 ){
 
   $hash = {
-    ':userkey' => $userkey,
-    ':apikey'  => $apikey,
+    'userkey' => $userkey,
+    'apikey'  => $apikey,
   }
 
   file { "${settings::confdir}/pushover.yaml" :
