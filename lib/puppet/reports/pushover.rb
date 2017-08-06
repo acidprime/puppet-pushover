@@ -35,7 +35,8 @@ Puppet::Reports.register_report(:pushover) do
             :token    => APIKEY,
             :user     => USERKEY,
             :title    => 'Puppet',
-            :message  => message
+            :message  => message,
+            :priority => -2
           })
           response = http.request(request)
         end
